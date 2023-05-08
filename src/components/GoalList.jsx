@@ -34,7 +34,7 @@ function GoalList() {
                             habitsGoalData?.habits.map((habit, index) => (
                                 <Fragment key={habit.id}>
                                     <div className='flex justify-between'>
-                                        <h1 className='text-accent'>{habit.habit_goal}</h1>
+                                        <h1 className='text-accent font-nunito font-bold'>{habit.habit_goal}</h1>
                                         
                                         <button type='button'
                                             onClick={() =>
