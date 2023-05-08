@@ -6,7 +6,7 @@ import DeleteError from './DeleteError'
 function DeleteModal({ setIsClicked, handleDelete, success, error }) {
     return (
         <div className='fixed inset-0 z-10 flex items-center justify-center bg-opacity-30 backdrop-blur-sm'>
-            <div className='bg-white w-[331px] h-[470px] p-[15px] rounded-[6px]'>
+            <div className='bg-white w-[331px] h-[550px] p-[15px] rounded-[6px]'>
                 <div>
                     <div className='w-[301px] h-[35px]'>
                         <div>
