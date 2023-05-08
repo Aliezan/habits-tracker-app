@@ -109,8 +109,6 @@ function EditModal({ setIsClicked, dataId }) {
         })
     }
 
-    console.log(formik.values);
-
 
     return (
         <div className='fixed inset-0 z-10 flex items-center justify-center bg-opacity-30 backdrop-blur-sm'>
