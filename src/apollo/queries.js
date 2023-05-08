@@ -28,6 +28,7 @@ export const GET_MORE_HABITS_NAME = gql`
 subscription GetMoreHabits {
   habits(order_by: {id: desc}) {
     habit_name
+    habit_goal
     id
   }
 }
@@ -36,9 +37,12 @@ subscription GetMoreHabits {
 export const GET_HABITS_BY_ID = gql`
 subscription GetHabits($_eq: Int!) {
   habits(where: {id: {_eq: $_eq}}) {
-    habit_name
+  	id
     habit_goal
-    id
+    habit_name
+    habit_deadline
+    habit_frequency
+    habit_deadline_in_day
   }
 }
 `;
@@ -153,3 +157,38 @@ mutation DeleteHabit($_eq: Int!, $id: Int!) {
     }
   }
 }`;
+
+export const ADD_FINISHED_HABITS = gql`
+mutation CreateFinishedHabits
+  ($habit_name: String!, $habit_goal: String!, $habit_deadline: timestamptz!, $habit_frequency: Int!, $habit_deadline_in_day: Int!) {
+    insert_finished_habits_one(object: {
+      habit_name: $habit_name,
+      habit_goal: $habit_goal,
+      habit_deadline: $habit_deadline,
+      habit_frequency: $habit_frequency,
+      habit_deadline_in_day: $habit_deadline_in_day
+    }) {
+      id
+    }
+  }
+`;
+
+export const GET_FINISHED_HABITS_SUBSCRIPTION = gql`
+subscription GetFinishedHabits {
+  finished_habits(limit: 3, order_by: {id: desc}) {
+    id
+    habit_name
+    habit_goal
+  }
+}
+`;
+
+export const GET_MORE_FINISHED_HABITS = gql`
+subscription GetFinishedHabits {
+  finished_habits (order_by: {id: desc}) {
+    id
+    habit_name
+    habit_goal
+  }
+}
+`;
