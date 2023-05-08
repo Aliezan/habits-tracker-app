@@ -4,6 +4,7 @@ import WelcomeHeading from '../components/WelcomeHeading'
 import HabitsContainer from '../components/HabitsContainer'
 import Navigation from '../components/Navigation'
 import GoalsContainer from '../components/GoalsContainer'
+import FinishedContainer from '../components/FinishedContainer'
 
 function Home() {
     return (
@@ -14,6 +15,7 @@ function Home() {
                 <HabitsContainer />
                 <Navigation />
                 <GoalsContainer />
+                <FinishedContainer />
             </div>
 
         </div>
