@@ -69,13 +69,13 @@ function ModalInput({ setClicked }) {
                                 </svg>
                             </div>
                             <div className='text-center'>
-                                <h1>Done</h1>
-                                <p>New Habit Goal has added
+                                <h1 className='font-nunito font-bold text-[25px]'>Done !</h1>
+                                <p className='font-nunito'>New Habit Goal has added
                                     Let’s do the best to achieve your goal!</p>
                             </div>
                             <div className='flex justify-center mt-[30px]'>
                                 <button type='button'
-                                    className='btn btn-secondary'
+                                    className='btn btn-secondary w-[298px]'
                                     onClick={() => setClicked(false)}>
                                     Close
                                 </button>

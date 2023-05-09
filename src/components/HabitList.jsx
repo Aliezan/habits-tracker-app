@@ -20,7 +20,6 @@ function HabitList() {
     const [
         createHabitLog,
         {
-            data: createHabitLogData,
             error: createHabitLogError
         }
     ] = useMutation(ADD_HABIT_LOG)
@@ -37,10 +36,6 @@ function HabitList() {
                     }
                 })
             })
-
-            if (createHabitLogData) {
-                toast.success('Habit checked successfully')
-            }
 
             if (createHabitLogError) {
                 toast.error('You have checked habit for today, please try again tomorrow')
