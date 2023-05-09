@@ -192,3 +192,12 @@ subscription GetFinishedHabits {
   }
 }
 `;
+
+export const GET_FINISHED_GOALS_SUBSCRIPTION = gql`
+subscription GetFinishedGoals {
+  finished_habits (order_by: {id: desc}) {
+    id
+    habit_goal
+  }
+}
+`;
