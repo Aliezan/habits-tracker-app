@@ -87,12 +87,12 @@ function EditModal({ setIsClicked, dataId }) {
     })
 
     useEffect(() => {
-        if (getHabitsByIdData) {
+        if (getHabitsByIdData && getHabitsByIdData.habits.length > 0) {
             formik.setValues({
-                habitName: getHabitsByIdData?.habits[0].habit_name,
-                yourGoal: getHabitsByIdData?.habits[0].habit_goal,
-                period: getHabitsByIdData?.habits[0].habit_deadline_in_day,
-                type: getHabitsByIdData?.habits[0].habit_frequency,
+                habitName: getHabitsByIdData?.habits[0].habit_name || '',
+                yourGoal: getHabitsByIdData?.habits[0].habit_goal || '',
+                period: getHabitsByIdData?.habits[0].habit_deadline_in_day || '',
+                type: getHabitsByIdData?.habits[0].habit_frequency || '',
             })
         }
     }, [getHabitsByIdData])
@@ -107,6 +107,7 @@ function EditModal({ setIsClicked, dataId }) {
                 habit_deadline_in_day: formik.values.period,
             }
         })
+        handleDelete()
     }
 
 
