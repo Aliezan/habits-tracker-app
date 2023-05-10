@@ -53,7 +53,7 @@ function MoreGoals() {
                                 moreHabitsGoalData?.habits.map((habit, index) => (
                                     <Fragment key={habit.id}>
                                         <div className='flex justify-between'>
-                                            <h1 className='text-accent'>
+                                            <h1 className='font-nunito font-bold'>
                                                 {habit.habit_goal}
                                             </h1>
 

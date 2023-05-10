@@ -89,7 +89,7 @@ function MoreHabits() {
                     <div className='mt-[14px] mb-[14px] flex justify-center' key={habit.id}>
                       <div className="card w-[335px] h-[58px] bg-accent-content text-primary-content">
                         <div className='p-[14px] flex justify-between gap-0'>
-                          <h1>{habit.habit_name}</h1>
+                          <h1 className='font-nunito font-bold'>{habit.habit_name}</h1>
                           <input
                             type="checkbox"
                             className="checkbox absolute top-[15px] right-[40px]"
