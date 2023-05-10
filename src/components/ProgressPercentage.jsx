@@ -17,7 +17,7 @@ function ProgressPercentage() {
     const totalHabits = habitsNameData?.habits.map(habit => habit.habit_goal).length
     const totalFinishedHabits = finishedHabitsData?.finished_habits.map(habit => habit.habit_name).length
 
-    const percentage = (totalFinishedHabits / totalHabits) * 100
+    const percentage = (totalHabits / totalFinishedHabits) * 100
     const roundedPercentage = Math.round(percentage)
 
 
