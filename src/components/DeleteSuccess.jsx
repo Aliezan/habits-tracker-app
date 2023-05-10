@@ -13,13 +13,13 @@ function DeleteSuccess({ setIsClicked }) {
                     </svg>
                 </div>
                 <div className='text-center'>
-                    <h1>Successfully deleted</h1>
+                    <h1 className='font-nunito font-bold'>Successfully deleted</h1>
                 </div>
                 <div className='flex justify-center mt-[30px]'>
                     <button type='button'
-                        className='btn btn-secondary'
+                        className='btn btn-secondary w-[298px]'
                         onClick={() => setIsClicked(false)}>
-                        Close
+                        OK
                     </button>
                 </div>
             </div>
